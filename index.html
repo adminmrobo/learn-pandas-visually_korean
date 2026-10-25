@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;800&family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css">
 <style>
 :root{
   --paper:#ECF0EA; --sheet:#FFFFFF; --ink:#1C2620; --ink-2:#55625A; --rule:#C6CFC7;
@@ -185,6 +186,68 @@ footer.foot a{color:inherit}
 .bubble .who{display:block;font-size:.76rem;font-weight:600;color:#5B6660;margin-bottom:1px}
 @media (max-width:820px){ .av{width:42px;height:42px;font-size:.9rem} }
 
+/* ================= 표지 (cover) ================= */
+body.on-cover .frame,body.on-cover .mob{display:none}
+#cover{display:none;--bg:#13141f;--bg2:#1b1533;--panel:#261e45;--line:#3d3170;--text:#efe9ff;--muted:#b5abd6;--violet:#b07cff;--pink:#ff86b8;--cyan:#57d0dc;--red:#ef5b5b;--amber:#f1b646;--green:#5ee39c;
+  --px:"Galmuri11","Galmuri9","Gothic A1",monospace;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:16px 16px}
+body.on-cover #cover{display:block}
+#cover a{color:var(--cyan)}
+#cover .wrap{max-width:1120px;margin:0 auto;padding:0 clamp(14px,3.5vw,32px)}
+#cover .alarm{position:sticky;top:0;z-index:20;background:repeating-linear-gradient(-45deg,#3a2a12 0 14px,#24190c 14px 28px);border-bottom:4px solid var(--amber)}
+#cover .alarm .wrap{display:flex;align-items:center;gap:12px;height:46px;font-family:var(--px);font-size:14px;white-space:nowrap;overflow:hidden}
+#cover .lamp{width:12px;height:12px;background:var(--amber);box-shadow:0 0 0 2px #13141f,0 0 12px var(--amber);flex:none;animation:cblink 1s steps(2) infinite}
+#cover .tick{overflow:hidden;flex:1}#cover .tick span{display:inline-block;padding-left:100%;animation:ctick 28s linear infinite}
+#cover .alarm a{color:var(--text);text-decoration:none;border:2px solid var(--line);background:#13141f;padding:2px 10px;flex:none}
+@keyframes cblink{50%{opacity:.25}}@keyframes ctick{to{transform:translateX(-100%)}}
+#cover .pbox{background:var(--panel);border:3px solid var(--line);box-shadow:6px 6px 0 #0d0a1c;position:relative}
+#cover .pbtn{display:inline-block;font-family:var(--px);font-size:15px;color:#13141f;background:var(--green);border:3px solid #13141f;box-shadow:4px 4px 0 #0d0a1c;padding:8px 16px;text-decoration:none;cursor:pointer}
+#cover .pbtn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 #0d0a1c}#cover .pbtn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 #0d0a1c}
+#cover header{padding:30px 0 6px}
+#cover .series{font-family:var(--px);font-size:13.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+#cover .series .tag{background:var(--amber);color:#13141f;padding:1px 8px}
+#cover .cscene{margin:16px 0 0;overflow:hidden}#cover .cscene img{display:block;width:100%;max-width:100%;height:auto;image-rendering:auto}
+#cover .stamp{position:absolute;top:14px;right:14px;font-family:var(--px);font-size:clamp(13px,2.2vw,20px);color:var(--green);border:3px solid var(--green);background:rgba(19,20,31,.82);padding:4px 12px;transform:rotate(4deg);box-shadow:3px 3px 0 #0d0a1c}
+#cover .clock{position:absolute;left:14px;bottom:14px;font-family:var(--px);font-size:clamp(13px,2vw,18px);background:rgba(19,20,31,.85);border:3px solid var(--line);padding:4px 12px;color:var(--amber)}
+#cover h1{font-family:var(--px);font-size:clamp(26px,5vw,50px);line-height:1.25;margin:26px 0 8px;text-shadow:3px 3px 0 #0d0a1c;word-break:keep-all}
+#cover h1 .q{color:var(--violet)}
+#cover .lede{font-size:clamp(16px,2vw,18px);color:#d8d0f3;max-width:70ch;margin:0;word-break:keep-all}
+#cover .byline{color:var(--muted);font-size:14.5px;margin-top:10px}
+#cover section{padding:42px 0 6px}
+#cover h2{font-family:var(--px);font-size:clamp(21px,3.2vw,30px);margin:0 0 6px;text-shadow:2px 2px 0 #0d0a1c}
+#cover h2 .no{color:var(--amber)}
+#cover .sub{color:var(--muted);margin:0 0 18px;max-width:72ch;word-break:keep-all}
+#cover .log{display:grid;gap:14px}
+#cover .csay{display:grid;grid-template-columns:128px minmax(0,1fr);gap:12px;align-items:end}
+#cover .csay img{width:128px;height:128px;image-rendering:pixelated;filter:drop-shadow(3px 3px 0 #0d0a1c)}
+#cover .bub{background:var(--panel);border:3px solid var(--line);padding:10px 14px;position:relative;box-shadow:4px 4px 0 #0d0a1c}
+#cover .bub::before{content:"";position:absolute;left:-12px;bottom:14px;border:6px solid transparent;border-right-color:var(--line);border-right-width:9px}
+#cover .who{font-family:var(--px);font-size:13px;display:block;margin-bottom:2px}
+#cover .c-doc .who{color:var(--violet)}#cover .c-asst .who{color:var(--pink)}#cover .c-fly .who{color:var(--red)}#cover .c-robo .who{color:var(--cyan)}
+#cover .sys{font-family:var(--px);font-size:14px;color:var(--amber);border:3px dashed var(--amber);padding:10px 14px;background:rgba(241,182,70,.06)}
+#cover .order{padding:18px 22px}#cover .order h3{font-family:var(--px);margin:0 0 8px;color:var(--amber);font-size:18px}
+#cover .order dl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 14px;margin:0}
+#cover .order dt{font-family:var(--px);color:var(--muted);font-size:14px}#cover .order dd{margin:0}
+#cover .missions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+#cover .mcard{background:var(--panel);border:3px solid var(--line);box-shadow:6px 6px 0 #0d0a1c;padding:14px 18px;display:flex;flex-direction:column;border-top:8px solid var(--mc)}
+#cover .mcard.is-done .mno::after{content:" ✔ CLEAR";color:var(--green)}
+#cover .mtop{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-family:var(--px);font-size:13px}
+#cover .mno{color:var(--mc)}#cover .mtag{border:2px solid var(--line);padding:0 6px;color:var(--muted)}#cover .mcnt{margin-left:auto;color:var(--amber)}
+#cover .mcard h3{font-family:var(--px);font-size:21px;margin:8px 0 2px}
+#cover .mcmds{font-family:"Nanum Gothic Coding",monospace;font-size:13.5px;color:#d8d0f3;margin:2px 0 10px;word-break:break-all}
+#cover .mfoot{margin-top:auto;padding-top:8px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--px);font-size:13px;color:var(--muted)}
+#cover .prog{margin-top:18px;display:flex;align-items:center;gap:12px;font-family:var(--px);font-size:14px}
+#cover .bar{flex:1;max-width:420px;height:18px;border:3px solid var(--line);background:#13141f;padding:2px}
+#cover .bar i{display:block;height:100%;background:var(--green);width:0}
+#cover .kit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#cover .kit .pbox{padding:14px 16px}#cover .kit h4{font-family:var(--px);margin:0 0 6px;font-size:16px;color:var(--cyan)}
+#cover .kit p{margin:0;font-size:15px;color:#d8d0f3;word-break:keep-all}
+#cover footer{margin-top:40px;border-top:4px solid var(--line);background:var(--bg2);padding:26px 0 34px;color:var(--muted);font-size:14.5px}
+#cover footer p{margin:0 0 8px;word-break:keep-all}
+.brand h1 a{color:inherit;text-decoration:none}
+@media (max-width:820px){#cover .missions,#cover .kit{grid-template-columns:minmax(0,1fr)}#cover .order dl{grid-template-columns:minmax(0,1fr)}#cover .csay{grid-template-columns:64px minmax(0,1fr)}#cover .csay img{width:64px;height:64px}}
+@media (prefers-reduced-motion:reduce){#cover .tick span{padding-left:0;animation:none}#cover .lamp{animation:none}}
+
 @media (max-width:980px){
   .lab{grid-template-columns:1fr}
 }
@@ -205,6 +268,65 @@ footer.foot a{color:inherit}
 </style>
 </head>
 <body>
+<div id="cover">
+<div class="alarm" role="status"><div class="wrap"><span class="lamp" aria-hidden="true"></span><div class="tick"><span>!!! 장부 도착 !!! 저녁 7시 · 발신: 카페 Koi · 동네 편의점 · 의류 쇼핑몰 · 내용: "표를 이렇게 저렇게 바꿔 주세요" · 명령어 72장 · 장부 상담소 전원 출근 !!!</span></div><a href="#ch-list">목차 보기</a></div></div>
+<header><div class="wrap">
+  <div class="series"><span class="tag">도착</span><span>보면서 배우는 pandas</span><span>· 명령어 72장 · 0장 ~ 9장</span></div>
+  <figure class="cscene pbox" style="margin-left:0;margin-right:0">
+    <img src="assets/hero/hero.jpg" width="1536" height="1024" alt="저녁 일곱 시 장부 상담소. 창밖으로 카페, 편의점, 옷가게가 불을 켜고 있다. 책상에서 박사는 크게 웃고, 조수는 펼친 장부를 들여다보고, 초파리 연구원은 장부 한 줄을 가리키고, 계산대 로봇은 옆에 떠 있다">
+    <span class="stamp">TABLES IN MOTION</span><span class="clock">PM 07:00</span>
+  </figure>
+  <h1>저녁 일곱 시, 장부 세 권이 도착했다<br><span class="q">"표는 명령어 하나에 어떻게 움직일까?"</span></h1>
+  <p class="lede">카페 Koi, 동네 편의점, 의류 쇼핑몰이 장부를 맡겼습니다. 거르고, 붙이고, 묶고, 그리는 일은 모두 pandas 명령어 한 줄씩입니다. 이 책은 명령어마다 <b>표가 한 단계씩 움직이는 그림</b>으로 보여 주고, Colab 에 그대로 붙여 넣는 코드와 실제 실행 결과를 함께 싣습니다.</p>
+  <p class="byline">글 · 안상선 ((주)M-Robo 대표)</p>
+</div></header>
+<main>
+<section aria-labelledby="clog-h"><div class="wrap">
+  <h2 id="clog-h"><span class="no">LOG</span> 19:00 장부 상담소</h2>
+  <p class="sub">장부 상자가 책상에 올라온 직후의 기록입니다.</p>
+  <div class="log">
+    <div class="sys">[SYSTEM] 장부 3권 접수. 카페 판매 기록, 편의점 결제 기록, 쇼핑몰 해외 주문. 요청: "표를 원하는 모양으로 바꿔 주세요."</div>
+    <div class="csay c-asst"><img src="assets/chars/asst_smile.png" alt="조수"><div class="bub"><span class="who">조수</span>장부가 세 권이나 왔어요! 그런데 명령어를 쓰면 표 안에서 정확히 무슨 일이 일어나는 거예요? 눈으로 보고 싶어요.</div></div>
+    <div class="csay c-doc"><img src="assets/chars/doc_smile.png" alt="박사"><div class="bub"><span class="who">박사</span>그래서 칠판에 그려 볼 거예요. 나누고, 계산하고, 다시 모으고. 명령어 하나에 표가 한 칸씩 움직이는 걸 재생 버튼으로 봐요.</div></div>
+    <div class="csay c-fly"><img src="assets/chars/fly_point.png" alt="초파리 연구원"><div class="bub"><span class="who">초파리 연구원</span>그림만 보지 말고 결과도 맞춰 봐. 이름 끝에 숨은 공백 하나로 줄이 통째로 빠지기도 하거든.</div></div>
+    <div class="csay c-robo"><img src="assets/chars/robo_idle.png" alt="Money-Robo"><div class="bub"><span class="who">Money-Robo</span>삐빅, 계산 중… 명령어 72장 모두 실제로 돌려 본 결과를 실었어.</div></div>
+  </div>
+</div></section>
+<section aria-labelledby="corder-h"><div class="wrap">
+  <h2 id="corder-h"><span class="no">ORDER</span> 사장님 의뢰서</h2>
+  <div class="pbox order">
+    <h3>■ 장부 정리 · 상담소 전원</h3>
+    <dl>
+      <dt>질문</dt><dd>pandas 명령어 한 줄은 표를 어떻게 바꾸는가?</dd>
+      <dt>방법</dt><dd>명령어마다 2~4단계 그림을 재생하며 표가 바뀌는 순간을 본다. 엑셀로 치면 무엇인지 함께 적는다.</dd>
+      <dt>확인</dt><dd>코드는 Colab 새 셀에 붙여 넣으면 파일 없이 돈다. 오른쪽 실행 결과와 똑같이 나오는지 맞춰 본다.</dd>
+      <dt>권장 순서</dt><dd>0장 → 9장. 필요한 명령어만 검색해서 봐도 된다</dd>
+    </dl>
+  </div>
+</div></section>
+<section id="ch-list" aria-labelledby="cmis-h"><div class="wrap">
+  <h2 id="cmis-h"><span class="no">CHAPTERS</span> 열 개의 장</h2>
+  <p class="sub">"▶ 시작"을 누르면 그 장의 첫 명령어부터 열립니다. 열어 본 명령어는 이 기기에 기억되어 장마다 진행이 표시됩니다.</p>
+  <div class="missions" id="chcards"></div>
+  <div class="prog" aria-live="polite"><span>진행</span><div class="bar" aria-hidden="true"><i id="cbar"></i></div><span id="cprog">0 / 72</span></div>
+</div></section>
+<section aria-labelledby="ckit-h"><div class="wrap">
+  <h2 id="ckit-h"><span class="no">KIT</span> 명령어마다 들어 있는 것</h2>
+  <div class="kit">
+    <div class="pbox"><h4>▣ 움직이는 표</h4><p>재생 · 이전 · 다음 버튼으로 표가 나뉘고 합쳐지는 순간을 한 단계씩 봅니다.</p></div>
+    <div class="pbox"><h4>▣ Colab 코드</h4><p>파일 없이 바로 도는 예제. 복사 한 번이면 새 셀에서 같은 결과가 나옵니다.</p></div>
+    <div class="pbox"><h4>▣ 실제 실행 결과</h4><p>표와 차트 모두 코드를 실제로 돌려 얻은 결과입니다. 숫자를 맞춰 보며 읽습니다.</p></div>
+    <div class="pbox"><h4>▣ 엑셀 짝꿍</h4><p>VLOOKUP, SUMIF, 피벗 테이블처럼 이미 아는 기능과 짝을 지어 줍니다.</p></div>
+    <div class="pbox"><h4>▣ 함정 카드</h4><p>숨은 공백, 사전에 없는 값, 평균과 합계처럼 자주 걸려 넘어지는 곳에는 식구들이 말을 겁니다.</p></div>
+    <div class="pbox"><h4>▣ 가게 데이터</h4><p>회계 용어 없이 카페 · 편의점 · 쇼핑몰 장부로만 배웁니다. 숫자는 모두 연습용입니다.</p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <p>제작 안상선 (Ahn, Sang-Sun) · <a href="mailto:sangsun.ahn@gmail.com">sangsun.ahn@gmail.com</a> · © 2026 All rights reserved.</p>
+  <p>예제 속 가게와 숫자는 모두 지어낸 것입니다. Money-Robo는 저자 서비스의 마스코트이며, 극 중 대사는 비유일 뿐 투자 권유가 아닙니다.</p>
+</div></footer>
+</div>
 <div class="mob">
   <strong>보면서 배우는 pandas</strong>
   <select id="mobsel" aria-label="명령어 고르기"></select>
@@ -212,7 +334,7 @@ footer.foot a{color:inherit}
 <div class="frame">
   <aside>
     <div class="brand">
-      <h1>보면서 배우는 pandas</h1>
+      <h1><a href="#cover" title="표지로">보면서 배우는 pandas</a></h1>
       <p class="sub">카페·편의점·쇼핑몰 장부로 보는 명령어 72장</p>
       <p>명령어마다 표가 한 단계씩 움직이는 그림으로 본다. 코드는 Colab 새 셀에 그대로 붙여 넣으면 파일 없이 실행된다.</p>
     </div>
@@ -226,7 +348,7 @@ footer.foot a{color:inherit}
       <summary>이 책의 식구 넷 — 장부 상담소에서 함께 표를 읽는다</summary>
       <div class="grid">
         <div class="mate"><span class="av av-doc" data-k="doc_smile">박</span><div><b>박사 · 상담소장</b><small>어려운 개념을 비유로 풀고 숫자로 닫는다.</small><q>숫자로 한번 해 볼까요?</q></div></div>
-        <div class="mate"><span class="av av-asst" data-k="asst_smile">세</span><div><b>세라 · 신입 매니저</b><small>여러분 대신 "왜요?"를 묻고, 실행한 숫자를 읽어 준다.</small><q>잠깐만요, 그건 왜요?</q></div></div>
+        <div class="mate"><span class="av av-asst" data-k="asst_smile">조</span><div><b>조수 · 신입 매니저</b><small>여러분 대신 "왜요?"를 묻고, 실행한 숫자를 읽어 준다.</small><q>잠깐만요, 그건 왜요?</q></div></div>
         <div class="mate"><span class="av av-fly" data-k="fly_point">초</span><div><b>초파리 연구원 · 검수 담당</b><small>늘 한 번 더 의심한다. 빠진 줄, 숨은 공백을 찾는다.</small><q>그 숫자, 처음 보는 데이터로도 맞아?</q></div></div>
         <div class="mate"><span class="av av-robo st-idle" data-k="robo_idle">R</span><div><b>Money-Robo · 계산대 로봇</b><small>계산이 맞는지 얼굴로 보여 준다. 가끔 너무 일찍 기뻐한다.</small><q>삐빅, 계산 중…</q></div></div>
       </div>
@@ -571,7 +693,7 @@ function play(){
 
 
 /* ---------------- crew & talk ---------------- */
-var CREW={doc:{name:"박사",b:"박",face:"doc_explain"},asst:{name:"세라",b:"세",face:"asst_why"},fly:{name:"초파리",b:"초",face:"fly_doubt"},robo:{name:"Money-Robo",b:"R",face:"robo_idle"}};
+var CREW={doc:{name:"박사",b:"박",face:"doc_explain"},asst:{name:"조수",b:"조",face:"asst_why"},fly:{name:"초파리",b:"초",face:"fly_doubt"},robo:{name:"Money-Robo",b:"R",face:"robo_idle"}};
 var ALIASES={doc_explain:"doc_smile",doc_judge:"doc_smile",doc_think:"doc_smile",doc_spark:"doc_smile",
   asst_why:"asst_smile",asst_ledger:"asst_smile",asst_sweat:"asst_smile",asst_spark:"asst_smile",
   fly_doubt:"fly_point",fly_magnify:"fly_point",fly_arms:"fly_point",fly_coffee:"fly_point",
@@ -595,6 +717,36 @@ function renderTalk(list){
 }
 Array.prototype.forEach.call(document.querySelectorAll(".crew .av"),function(a){ charImg(a,a.dataset.k); });
 
+
+/* ---------------- cover ---------------- */
+var SEEN_KEY="lpv-seen";
+function seenLoad(){ try{ return JSON.parse(localStorage.getItem(SEEN_KEY)||"{}")||{}; }catch(e){ return {}; } }
+function seenMark(id){ try{ var s=seenLoad(); s[id]=1; localStorage.setItem(SEEN_KEY,JSON.stringify(s)); }catch(e){} }
+var MC=["#5ee39c","#82b8ff","#f1b646","#ff86b8","#57d0dc","#b07cff","#f0604d","#9be15d","#ffb86b","#c9b8ff"];
+function buildCover(){
+  var box=$("chcards"); if(!box) return; box.innerHTML="";
+  var chs=[], idx={};
+  CARDS.forEach(function(c,i){ if(!(c.ch in idx)){ idx[c.ch]=chs.length; chs.push({ch:c.ch,first:i,cards:[]}); } chs[idx[c.ch]].cards.push(c); });
+  var seen=seenLoad(), tot=0;
+  chs.forEach(function(g,k){
+    var n=g.cards.filter(function(c){return seen[c.id];}).length; tot+=n;
+    var m=g.ch.match(/^(\d+)\.\s*(.*)$/), no=m?m[1]:k, name=m?m[2]:g.ch;
+    var a=el("article","mcard"+(n===g.cards.length?" is-done":"")); a.style.setProperty("--mc",MC[k%MC.length]);
+    a.innerHTML='<div class="mtop"><span class="mno">CHAPTER '+esc(no)+'</span><span class="mtag">'+esc(g.cards[0].excel||"pandas").split(",")[0]+'</span><span class="mcnt">'+g.cards.length+'장</span></div>'+
+      '<h3>'+esc(name)+'</h3><p class="mcmds">'+g.cards.slice(0,4).map(function(c){return esc(c.cmd);}).join(" · ")+(g.cards.length>4?" …":"")+'</p>'+
+      '<div class="mfoot"><a class="pbtn" href="#'+esc(g.cards[0].id)+'">▶ 시작</a><span>'+n+' / '+g.cards.length+' 열어 봄</span></div>';
+    box.appendChild(a);
+  });
+  $("cprog").textContent=tot+" / "+CARDS.length; $("cbar").style.width=(tot/CARDS.length*100)+"%";
+}
+function route(){
+  var h=""; try{ h=location.hash.slice(1); }catch(e){}
+  var i=-1; CARDS.forEach(function(c,k){ if(c.id===h) i=k; });
+  if(i<0){ document.body.classList.add("on-cover"); buildCover(); if(h!=="ch-list") window.scrollTo(0,0); else { var t=$("ch-list"); if(t) t.scrollIntoView(); } return; }
+  document.body.classList.remove("on-cover"); if(state.idx!==i || !stageEls.length) openCard(i,true); window.scrollTo({top:0});
+}
+window.addEventListener("hashchange",route);
+
 /* ---------------- card ---------------- */
 function openCard(i,auto){
   stop(); state.idx=i; state.cur=0;
@@ -615,6 +767,7 @@ function openCard(i,auto){
   var pv=CARDS[i-1], nx=CARDS[i+1];
   $("pgprev").innerHTML= pv? "<small>← 이전</small><span>"+esc(pv.title)+"</span>" : ""; $("pgprev").style.visibility=pv?"visible":"hidden";
   $("pgnext").innerHTML= nx? "<small>다음 →</small><span>"+esc(nx.title)+"</span>" : ""; $("pgnext").style.visibility=nx?"visible":"hidden";
+  seenMark(c.id);
   try{ if(history.replaceState && location.protocol!=="about:") history.replaceState(null,"","#"+c.id); }catch(e){}
   if(auto && !reduce) setTimeout(function(){ if(state.idx===i && !state.timer) play(); }, 700);
 }
@@ -662,8 +815,7 @@ document.addEventListener("keydown",function(e){
 var rt; window.addEventListener("resize",function(){ clearTimeout(rt); rt=setTimeout(function(){ drawArrows(CARDS[state.idx]); },150); });
 
 buildNav();
-var start=0, h=""; try{ h=location.hash.slice(1); }catch(e){} CARDS.forEach(function(c,i){ if(c.id===h) start=i; });
-openCard(start,true);
+route();
 if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ drawArrows(CARDS[state.idx]); });
 })();
 </script>

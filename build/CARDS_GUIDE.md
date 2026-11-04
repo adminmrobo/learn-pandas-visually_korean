@@ -10,5 +10,5 @@
 - caption 의 숫자도 실제 실행 결과와 같아야 한다(f-string 으로 ns 에서 꺼내 쓴다).
 - tip: 내 파일로 할 때의 한 줄(선택). "수업 파일", "키트", "주차", "슬라이드", "P-xx" 같은 다른 자료 언급 금지.
 - talk(선택, 최대 2줄, 한 줄 60자 이하): 장의 첫 카드 = 세라 질문 + 박사 답. 함정 카드(공백, NaN, 평균 vs 합계, 빈 표 등) = 한 줄. 다른 카드는 비운다.
-  who: doc(박사, 해요체 설명) · asst(세라, "왜요?", 판정 안 함) · fly(초파리, 반말 짧은 의심 질문) · robo(Money-Robo, 반말 "삐빅", state= idle|thinking|wrong|confused|success, 투자 이야기 금지)
+  who: doc(박사, 해요체 설명) · asst(세라, "왜요?", 판정 안 함) · fly(초파리, 반말 짧은 의심 질문) · robo(주판봇, 반말 "삐빅", state= idle|thinking|wrong|confused|success, 투자 이야기 금지)
   talk 속 숫자는 실행 결과 숫자만.

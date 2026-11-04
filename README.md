@@ -29,4 +29,4 @@ pandas 2.2 기준(Colab 과 같은 출력)입니다. 예제 속 가게, 환율, 
 
 ---
 제작 안상선 (Ahn, Sang-Sun) · sangsun.ahn@gmail.com · © 2026 All rights reserved.
-Money-Robo는 저자 서비스의 마스코트이며, 극 중 대사는 비유일 뿐 투자 권유가 아닙니다.
+주판봇은 연구실 캐릭터이며, 극 중 대사는 비유일 뿐 투자 권유가 아닙니다.

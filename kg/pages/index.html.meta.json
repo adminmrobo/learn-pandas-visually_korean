@@ -1,0 +1,33 @@
+{
+ "title": "보면서 배우는 pandas",
+ "number": "01",
+ "series": "보면서 배우는 pandas",
+ "date": "2026-11-24",
+ "version": "1.1",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "about": [
+  "lab:term/index",
+  "lab:method/s09-01",
+  "lab:concept/mean",
+  "lab:concept/gradient",
+  "lab:term/table"
+ ],
+ "basedOn": [],
+ "educationalLevel": "입문~중급",
+ "license": "",
+ "url": "https://adminmrobo.github.io/learn-pandas-visually_korean/index.html",
+ "registry": "KG_00_registry 0.3",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 보면서 배우는 pandas. 보면서 배우는 pandas, v1.1."
+}

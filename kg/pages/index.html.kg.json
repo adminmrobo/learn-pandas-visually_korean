@@ -1,0 +1,373 @@
+{
+ "version": "1.0",
+ "page": "index",
+ "nodes": [
+  {
+   "id": "lab:term/index",
+   "type": "Term",
+   "label": {
+    "ko": "인덱스",
+    "en": "index"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "data",
+    "acct"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "책 뒤의 찾아보기처럼, 특정 열로 빨리 찾도록 미리 정리해 둔 구조."
+   }
+  },
+  {
+   "id": "lab:method/s09-01",
+   "type": "Method",
+   "label": {
+    "ko": "SUM",
+    "en": "SUM"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "data"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "범위의 숫자를 더하거나 평균을 구해요."
+   }
+  },
+  {
+   "id": "lab:concept/mean",
+   "type": "Concept",
+   "label": {
+    "ko": "평균",
+    "en": "mean"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "data",
+    "stats",
+    "fin"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "모든 값을 더해 개수로 나눈 값. 데이터의 가운데를 나타냄."
+   }
+  },
+  {
+   "id": "lab:concept/gradient",
+   "type": "Concept",
+   "label": {
+    "ko": "기울기",
+    "en": "gradient"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "data",
+    "math",
+    "ai"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "변수를 아주 조금 바꿨을 때 손실이 얼마나 변하는지. 손실을 줄이려면 기울기 반대쪽으로 고친다."
+   }
+  },
+  {
+   "id": "lab:term/table",
+   "type": "Term",
+   "label": {
+    "ko": "테이블",
+    "en": "table"
+   },
+   "page": "index",
+   "anchor": "#ckit-h",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "data"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "행과 열로 이루어진 표. 관계형 데이터베이스는 데이터를 테이블에 담습니다."
+   }
+  },
+  {
+   "id": "lab:method/s09-33",
+   "type": "Method",
+   "label": {
+    "ko": "SORT",
+    "en": "SORT"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "data"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "지정한 열을 기준으로 행 전체를 정렬해 새 표로 반환해요."
+   }
+  },
+  {
+   "id": "lab:method/s09-22",
+   "type": "Method",
+   "label": {
+    "ko": "VLOOKUP",
+    "en": "VLOOKUP"
+   },
+   "page": "index",
+   "anchor": "#ckit-h",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "data"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "범위의 첫 열에서 키를 찾아 같은 행의 값을 가져와요."
+   }
+  },
+  {
+   "id": "lab:concept/weighted-mean",
+   "type": "Concept",
+   "label": {
+    "ko": "가중평균",
+    "en": "weighted mean"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "explained",
+   "domain": [
+    "data",
+    "fin",
+    "stats"
+   ],
+   "match": [],
+   "auto": "autokg-2026-11-24",
+   "definition": {
+    "ko": "항목마다 중요도(가중치)를 곱해 더한 뒤 가중치 합으로 나눈 평균."
+   }
+  },
+  {
+   "id": "lab:topic/keys-constraints",
+   "type": "Topic",
+   "label": {
+    "ko": "키와 제약조건",
+    "en": "Keys and constraints"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "data"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/spreadsheets-automation",
+   "type": "Topic",
+   "label": {
+    "ko": "스프레드시트 자동화",
+    "en": "Spreadsheet automation"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "data"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/central-tendency",
+   "type": "Topic",
+   "label": {
+    "ko": "대표값",
+    "en": "Measures of central tendency"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "stats"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/calculus-optimization-math",
+   "type": "Topic",
+   "label": {
+    "ko": "미적분과 최적화 수학",
+    "en": "Calculus for optimization"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "ai"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/relational-model",
+   "type": "Topic",
+   "label": {
+    "ko": "관계 모형",
+    "en": "Relational model"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "data"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/sql",
+   "type": "Topic",
+   "label": {
+    "ko": "SQL",
+    "en": "SQL"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "data"
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:topic/joins",
+   "type": "Topic",
+   "label": {
+    "ko": "조인",
+    "en": "Joins"
+   },
+   "page": "index",
+   "anchor": "#kg",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "domain": [
+    "data"
+   ],
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:term/index",
+   "p": "lab:broader",
+   "o": "lab:topic/keys-constraints",
+   "anchor": "#kg",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:method/s09-01",
+   "p": "lab:broader",
+   "o": "lab:topic/spreadsheets-automation",
+   "anchor": "#kg",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/mean",
+   "p": "lab:broader",
+   "o": "lab:topic/central-tendency",
+   "anchor": "#kg",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/gradient",
+   "p": "lab:broader",
+   "o": "lab:topic/calculus-optimization-math",
+   "anchor": "#kg",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:term/table",
+   "p": "lab:broader",
+   "o": "lab:topic/relational-model",
+   "anchor": "#ckit-h",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:method/s09-33",
+   "p": "lab:broader",
+   "o": "lab:topic/sql",
+   "anchor": "#kg",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:method/s09-22",
+   "p": "lab:broader",
+   "o": "lab:topic/joins",
+   "anchor": "#ckit-h",
+   "confidence": "medium"
+  },
+  {
+   "s": "lab:concept/weighted-mean",
+   "p": "lab:broader",
+   "o": "lab:topic/central-tendency",
+   "anchor": "#kg",
+   "confidence": "medium"
+  }
+ ]
+}
